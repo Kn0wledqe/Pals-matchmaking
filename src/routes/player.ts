@@ -20,7 +20,7 @@ routes.post("/", async (req, res) => {
     console.log(req.body)
 
     const playerExists = await PlayerModel.findOne({
-      name: player.Key,
+      Key: player.Key,
     }).exec();
 
     if (playerExists) {
